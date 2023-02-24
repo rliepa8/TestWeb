@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Datortīkli</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/mansStils.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {box-sizing: border-box}
+            /* Set height of body and the document to 100% */
+            body, html {
+                height: 100%;
+                margin: 0;
+                font-family: Arial;
+            }
+            /* Style tab links */
+            .tablink {
+                background-color: #051e80;
+                color: white;
+                float: left;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 14px 16px;
+                font-size: 17px;
+                width: 25%;
+            }
+
+            .tablink:hover {
+                background-color: #777;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="tablink" onclick="openPage('Datortikli', this, 'red')" id="defaultOpen">Datortīkli</button>
+        <button class="tablink" onclick="openPage('Internets', this, 'green')">Internets</button>
+        <button class="tablink" onclick="openPage('Lapas', this, 'blue')">Tīmekļa lapas</button>
+        <button class="tablink" onclick="openPage('Ietvari', this, 'orange')">Ietvari</button>
+        
+        <div class="tabcontent" id="Datortikli">
+        <h1>Datortīkli</h1>
+        <p style="font-weight:bold;">Datortīkls ir datu pārraides sistēma, kas savieno dažādās vietās esošus datorus.</p>
+        <p>Datortīklus veido:</p>
+        <ul>
+            <li>aparatūra</li>
+            <li>programmatūra</li>
+        </ul>
+        <p>, kas nodrošina <span style="color:red;">tīkla aparatūras</span> funkcionēšanu.</p>
+        <img src="images/datortikls.jfif" alt="Datortīkls"> <br>
+        <a href="internets.html">Uzzināt vairāk par interneta pieslēguma veidiem</a>
+        </div>
+        
+        <div class="tabcontent" id="Internets">
+        <h1>Internets</h1>
+        <p>Internets ir publiski pieejama savstarpēji saslēgtu datortīklu vispasaules sistēma, kas pārsūta datus, izmantojot Interneta protokolu (IP).</p>
+        </div>
+        
+        <div class="tabcontent" id="Lapas">
+        <h1>Tīmekļa lapas</h1>
+        <p>Tīmekļa lappuse (angļu: Web page) ir vispasaules tīmekļa "lapa", parasti HTML/XHTML formātā (datnes vārda paplašinājums parasti ir htm vai html), ar hiperteksta saitēm, kas ļauj pārvietoties no vienas lapas vai sadaļas uz citu.</p>
+        </div>
+        
+        <div class="tabcontent" id="Ietvari">
+        <h1>Ietvari</h1>
+        <p>Tīmekļa ietvars (Web Framework) vai tīmekļa lietojumprogrammu ietvars (Web Application Framework) ir programmatūras ietvars, kas paredzēts tīmekļa lietojumprogrammu, tostarp tīmekļa pakalpojumu, tīmekļa resursu un tīmekļa API, izstrādes atbalstam. Tīmekļa ietvari nodrošina standarta veidu, kā izveidot un izvietot tīmekļa lietojumprogrammas globālajā tīmeklī.</p>
+        </div>
+        
+        <script>
+	function openPage(pageName,elmnt,color) {
+  		var i;
+  		var tabcontent = document.getElementsByClassName("tabcontent");
+  		for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+  		}
+  		var tablinks = document.getElementsByClassName("tablink");
+  		for (i = 0; i < tablinks.length; i++) {
+  		  tablinks[i].style.backgroundColor = "";
+  		}
+  		document.getElementById(pageName).style.display = "block";
+  		elmnt.style.backgroundColor = color;
+	}
+
+	// Get the element with id="defaultOpen" and click on it
+	document.getElementById("defaultOpen").click();
+        </script>
+    </body>
+</html>
