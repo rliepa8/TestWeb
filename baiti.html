@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>baiti</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form id="form1">
+            <p>Aprēķināt cik daudz informāzijas var lejuplādēt</p>
+            <p><input id="sekundes" name="sekundes" onclick="reset()">sekundēs, ja interneta ātrums ir 25 Mbps.</p>
+            <p>Atbilde</p>
+            <p><input id="result" name="result">
+                <input type="radio" id="KiB" name="merv" value="KiB" onclick="result.value=sekundes.value*25*976.562"> <label for="KiB">KiB</label>
+                <input type="radio" id="KB" name="merv" value="KB" onclick="result.value=sekundes.value*1000"> <label for="KB">KB</label>
+            </p>
+        </form>
+        <script>
+            function reset() {
+                document.getElementById("form1").reset()
+            }
+        </script>
+    </body>
+</html>
